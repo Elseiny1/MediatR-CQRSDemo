@@ -18,6 +18,11 @@ builder.Services.AddMediatR(configuration =>
 
 #endregion
 
+#region InMemory cache
+builder.Services.AddMemoryCache();
+
+#endregion
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

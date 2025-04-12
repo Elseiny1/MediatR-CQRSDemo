@@ -19,8 +19,8 @@ namespace MediatorDemo.Features.CreatePlayer
                 Level = request.Level
             };
 
-            _context.players.Add(player);
-            _context.SaveChangesAsync();
+            await _context.players.AddAsync(player);
+            await _context.SaveChangesAsync();
 
             return player;
         }
